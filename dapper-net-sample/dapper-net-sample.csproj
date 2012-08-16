@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F593A5A9-BC26-4D54-9688-9B2E8EB13962}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dapper_net_sample</RootNamespace>
+    <AssemblyName>dapper-net-sample</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>dapper_net_sample.Utility.ProgramSelector</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.9\lib\net40\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Rainbow, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Rainbow.0.1.2\lib\net40\Dapper.Rainbow.dll</HintPath>
+    </Reference>
+    <Reference Include="MiscUtil">
+      <HintPath>..\packages\jot.skeet.miscutil\MiscUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contrib_Select_One_Entity.cs" />
+    <Compile Include="Contrib_SqlBuilder.cs" />
+    <Compile Include="Contrib_Update_Entity_Using_Tracking.cs" />
+    <Compile Include="Contrib_Update_One_Entity.cs" />
+    <Compile Include="Core_Select_Multiple_Items.cs" />
+    <Compile Include="Core_Select_One_Item_With_Collection_Reference.cs" />
+    <Compile Include="DapperContrib\SqlBuilder.cs" />
+    <Compile Include="DapperContrib\SqlMapperExtensions.cs" />
+    <Compile Include="DapperExtension_Test.cs" />
+    <Compile Include="Entity\Supplier.cs" />
+    <Compile Include="Core_Insert_One_Entity_Using_Raw_Sql.cs" />
+    <Compile Include="Rainbow_Select_All_Entities.cs" />
+    <Compile Include="Contrib_Insert_One_Entity.cs" />
+    <Compile Include="Core_Insert_One_Entity_Using_Sql_Extension.cs" />
+    <Compile Include="Rainbow_Update_One_Entity.cs" />
+    <Compile Include="Core_Select_All_Entities.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core_Select_By_Dynamic.cs" />
+    <Compile Include="Core_Select_One_Item.cs" />
+    <Compile Include="Core_Select_Multiple_Items_With_One_Reference.cs" />
+    <Compile Include="Rainbow_Insert_New_Entity.cs" />
+    <Compile Include="Utility\Constant.cs" />
+    <Compile Include="Utility\ObjectDumper.cs" />
+    <Compile Include="Utility\ProgramSelector.cs" />
+    <Compile Include="Utility\StackOverflowExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

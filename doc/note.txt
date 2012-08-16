@@ -1,0 +1,10 @@
+1. dapper.net does not support T4 template
+2. dapper,keep clean (all of the them are seperated)
+   
+   - dapper
+   - dapper.SqlMapperExtension
+   - dapper.SqlBuilder
+   - dapper.Rainbow
+3. need to create another project to review dapper implementation
+
+   
