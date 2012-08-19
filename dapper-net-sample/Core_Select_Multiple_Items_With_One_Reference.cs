@@ -14,18 +14,10 @@ namespace dapper_net_sample
     {
         public static void Main()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["database-connection-2"].ConnectionString;
-
-            using (var sqlConnection
-                = new SqlConnection(connectionString))
+            using (var sqlConnection = new SqlConnection(Constant.DatabaseConnection))
             {
                 sqlConnection.Open();
 
-                
-                // Product -- input 1
-                // Supplier -- input 2
-                // Product -- output
-                // split.
                 IEnumerable<Product> products = sqlConnection
                     .Query<Product, Supplier, Product>(
                         @"select Products.*, Suppliers.* 

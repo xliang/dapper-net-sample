@@ -63,9 +63,9 @@
     <Compile Include="Contrib_Update_One_Entity.cs" />
     <Compile Include="Core_Select_Multiple_Items.cs" />
     <Compile Include="Core_Select_One_Item_With_Collection_Reference.cs" />
+    <Compile Include="Core_Update_Item.cs" />
     <Compile Include="DapperContrib\SqlBuilder.cs" />
     <Compile Include="DapperContrib\SqlMapperExtensions.cs" />
-    <Compile Include="DapperExtension_Test.cs" />
     <Compile Include="Entity\Supplier.cs" />
     <Compile Include="Core_Insert_One_Entity_Using_Raw_Sql.cs" />
     <Compile Include="Rainbow_Select_All_Entities.cs" />

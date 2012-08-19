@@ -14,10 +14,8 @@ namespace dapper_net_sample
     {
         public static void Main()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["database-connection-2"].ConnectionString;
-
             using (var sqlConnection
-                = new SqlConnection(connectionString))
+                = new SqlConnection(Constant.DatabaseConnection))
             {
                 sqlConnection.Open();
                 IEnumerable<Product> products = sqlConnection

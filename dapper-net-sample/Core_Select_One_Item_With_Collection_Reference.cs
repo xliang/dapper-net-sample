@@ -5,7 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
 using dapper_net_sample.Entity;
-using dapper_net_sample.Extension; 
+using dapper_net_sample.Extension;
+using dapper_net_sample.Utility;
+
 namespace dapper_net_sample
 {
     /// <summary>
@@ -27,11 +29,7 @@ namespace dapper_net_sample
 
         private static IEnumerable<Supplier> QuerySupplier()
         {
-            string connectionString =
-                ConfigurationManager.ConnectionStrings["database-connection-2"].ConnectionString;
-
-            
-            using (var sqlConnection = new SqlConnection(connectionString))
+           using (var sqlConnection = new SqlConnection(Constant.DatabaseConnection))
             {
                 sqlConnection.Open();
 
