@@ -1,4 +1,4 @@
 dapper-net-sample
 =================
 
-Sample project using Dapper.net. You can check the my blog from: http://http://liangwu.wordpress.com/
+Sample project using Dapper.net and a few further additions. Forked and inspired from Liangwu
